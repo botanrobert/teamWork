@@ -1,10 +1,16 @@
+//Require the packages
 const express = require('express');
 const app = express();
 
-app.get('/', (req, res) => {
-    res.send('ROOT ROUTE');
-});
+//Loading Routes
+const IndexRoute = require('./routes/index');
 
+//Using Routes
+app.use('/', IndexRoute);
+
+
+
+//Starting Serv on PORT
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
