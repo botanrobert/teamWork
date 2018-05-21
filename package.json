@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/iacob28/teamWork/issues"
   },
-  "homepage": "https://github.com/iacob28/teamWork#readme"
+  "homepage": "https://github.com/iacob28/teamWork#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
