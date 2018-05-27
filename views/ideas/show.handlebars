@@ -1,0 +1,21 @@
+{{#each ideas}}
+<div class="row justify-content-md-center">
+    <div class="col-md-8 col-sm-12">
+        <div class="card card-body mb-3">
+            <h4>{{title}}</h4>
+            <p>{{details}}</p>
+            <a href="/ideas/edit/{{id}}" class="btn btn-warning btn-block mb-2">Edit</a>
+            <form action="/ideas/{{id}}?_method=DELETE" method="POST">
+                <button type="submit" class="btn btn-danger btn-block">Delete</button>
+            </form>
+        </div>
+    </div>
+</div>
+{{else}}
+<div class="jumbotron text-center">
+    <h1 class="display-3">Hi, {{currentUser.name}}</h1>
+    <p class="lead">You have no video ideas saved to data base, add one by clicking the button.</p>
+    <hr class="my-4">
+    <a class="btn btn-dark btn-lg" href="/ideas/new" role="button">Add new idea</a>
+</div>
+{{/each}}
